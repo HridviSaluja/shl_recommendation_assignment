@@ -13,6 +13,7 @@ langchain-openai==0.1.8
 langchain-text-splitters==0.2.2
 langsmith==0.1.147
 python-dotenv==1.1.1
+faiss-cpu==1.7.4
 
 # OpenAI / embeddings
 openai==1.109.1
@@ -35,4 +36,5 @@ tzdata==2025.2
 
 # Optional / deployment
 gunicorn==23.0.0
+
 
