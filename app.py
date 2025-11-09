@@ -38,7 +38,7 @@ embedding = OpenAIEmbeddings(
 
 # Load FAISS DB
 vectorstore = FAISS.load_local(
-    "C:/Users/HP/Desktop/SHL/faiss_shl_db3",
+    "faiss_shl_db3",
     embedding,
     allow_dangerous_deserialization=True
 )
