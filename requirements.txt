@@ -4,6 +4,7 @@ uvicorn==0.35.0
 pydantic==2.8.2
 numpy==1.26.4
 pandas==2.2.2
+streamlit==1.26.1
 
 # LangChain
 langchain==0.2.11
@@ -36,5 +37,6 @@ tzdata==2025.2
 
 # Optional / deployment
 gunicorn==23.0.0
+
 
 
