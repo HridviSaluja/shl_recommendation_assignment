@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import json
 
-API_URL = "http://localhost:8000/recommend"
+API_URL = "https://shl-recommendation-assignment-new.onrender.com/"
 
 st.set_page_config(page_title="SHL Assessment Recommender", layout="centered")
 
