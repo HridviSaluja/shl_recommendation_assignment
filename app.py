@@ -105,7 +105,19 @@ TEST_TYPE_MAPPING = {
 @app.post("/recommend")
 def recommend(payload: QueryRequest):
     result = rag_chain.invoke({"input": payload.query})
-    return {"recommendations": result["answer"]}
+    raw_output = result["answer"]
+
+    # Try to parse the model output safely
+    try:
+        parsed_output = ast.literal_eval(raw_output)
+        return {"recommendations": parsed_output}
+
+    except Exception:
+        # fallback: return raw text so Streamlit doesn't crash
+        return {
+            "error": "Model returned invalid format",
+            "raw_output": raw_output
+        }
 
 if __name__ == "__main__":
     uvicorn.run(app, host="localhost", port=8000)
